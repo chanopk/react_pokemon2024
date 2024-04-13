@@ -1,16 +1,9 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { PokemonEntries, Pokedex } from './models/PokemonEntries'
 import './App.css'
-
-interface PokemonSpecies {
-  name: string;
-  url: string;
-}
-
-interface PokemonEntries {
-  entry_number: number; 
-  pokemon_species: PokemonSpecies;
-}
+import PokemonList from './compoments/PokemonList'
+import PokomonItem from './compoments/PokemonItem'
 
 function App() {
   const [data, setData] = useState<PokemonEntries[]>([])
@@ -27,13 +20,11 @@ function App() {
 
   return (
     <>
-     {
-      data.map((val) => {
-        return <p>
-          name: {val.pokemon_species.name}
-        </p>
-      })
-     }
+      <div className="Screen-style">
+        <div className="PokemonList-bordered scrollable-area" id="scroll">
+          <PokemonList data={data} />
+        </div>
+      </div>
     </>
   )
 }
