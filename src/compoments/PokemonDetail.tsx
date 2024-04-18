@@ -19,7 +19,7 @@ function PokemonDetail() {
   
       fetchData();
     }, [entry_number]);
-
+// TODO add detail and style
     return (
         <div>
             <p>Name: {data?.name}</p>

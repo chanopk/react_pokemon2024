@@ -9,7 +9,7 @@ function PokemonList(pokedex: Pokedex) {
         <div className="PokemonList-style">
             {
                 pokedex.data.map((val) => {
-                    return <div className="scroll-area">
+                    return <div>
                         <ul>
                             <li key={val.entry_number}>
                                 <PokomonItem entry_number={val.entry_number} pokemon_species={val.pokemon_species} />
