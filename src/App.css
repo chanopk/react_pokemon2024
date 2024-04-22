@@ -110,3 +110,17 @@ a {
     max-width: 100%;
     height: auto;
 }
+
+.row-container {
+    display: flex; /* Enable Flexbox layout */
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Vertically center items (optional) */
+    gap: 8px;
+}
+
+.column-container {
+    display: flex; /* Enable Flexbox layout */
+    flex-direction: column; /* Arrange items in a row */
+    align-items: start;
+    gap: 8px;
+}
